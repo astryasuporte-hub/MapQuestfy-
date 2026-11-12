@@ -1,0 +1,6 @@
+{
+  "name": "MapQuestfy CRM",
+  "description": "Central administrativa MapQuestfy para operação da loja digital, CRM de clientes, pedidos, atendimento, tickets, bot Discord e integrações.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

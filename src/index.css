@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+:root {
+  --mq-bg-main: #080B09;
+  --mq-bg-sidebar: #0B0F0C;
+  --mq-bg-card: #111713;
+  --mq-bg-elevated: #171D18;
+  --mq-accent-primary: #A3FF12;
+  --mq-accent-secondary: #74C900;
+  --mq-accent-dark: #294C10;
+  --mq-text-primary: #F5F7F5;
+  --mq-text-secondary: #9DA89F;
+  --mq-border: #29332C;
+  --mq-success: #36D475;
+  --mq-warning: #F2B84B;
+  --mq-error: #F06464;
+  --mq-info: #72A8FF;
+
+  --font-display: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html,
+  body {
+    background-color: var(--mq-bg-main);
+    color: var(--mq-text-primary);
+    font-family: var(--font-sans);
+    letter-spacing: 0.005em;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+
+  *:focus-visible {
+    outline: 2px solid var(--mq-accent-primary);
+    outline-offset: 2px;
+  }
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--mq-bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #29332C;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3B4A3F;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
